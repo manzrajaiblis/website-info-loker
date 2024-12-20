@@ -1,6 +1,5 @@
 @extends('master.layout')
 
-
 @section('content')
 <div class="container" style="padding-top: 100px;">
     <h1>Edit Postingan</h1>
@@ -11,8 +10,9 @@
             <label for="category_id" class="form-label">Kategori</label>
             <select class="form-select" name="category_id" id="category_id">
                 @foreach ($categories as $category)
-                <option value="{{ $category->id }}" {{ $category->id == $post->category_id ? 'selected' : '' }}>{{
-                    $category->name }}</option>
+                <option value="{{ $category->id }}" {{ $category->id == $post->category_id ? 'selected' : '' }}>
+                    {{ $category->name }}
+                </option>
                 @endforeach
             </select>
         </div>
@@ -30,6 +30,12 @@
             @if ($post->image)
             <img src="{{ asset('images/posts/' . $post->image) }}" alt="{{ $post->title }}" class="img-thumbnail mt-2"
                 width="200">
+            <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" name="delete_image" id="delete_image" value="1">
+                <label class="form-check-label" for="delete_image">
+                    Hapus gambar saat ini
+                </label>
+            </div>
             @endif
         </div>
         <button type="submit" class="btn btn-primary">Update</button>

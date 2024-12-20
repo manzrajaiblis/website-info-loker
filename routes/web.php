@@ -32,7 +32,10 @@ Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/users/{user}/modal', [UserController::class, 'showModal'])->name('users.show-modal');
 Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
+
 Route::resource('categories', CategoryController::class);
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
 Route::resource('posts', PostController::class);
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
+
+

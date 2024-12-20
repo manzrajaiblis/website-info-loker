@@ -15,8 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
         <div class="container fw-bold">
             <a class="navbar-brand" href="/" aria-label="Homepage">
-                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/09/nike-nocta-logo-freelogovectors.net_.png"
-                    alt="Brand Logo">Yezus
+                <img src="{{ asset('images/logo/L.png') }}" alt="Logo Bumi" width="100" height="auto">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,26 +28,17 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Profil</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('profile') }}">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('contact') }}">Contact</a>
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('users') }}">Data Users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Data Warga</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">Data RT/RW</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Data Surat</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('users') }}">User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories') }}">Categories</a>

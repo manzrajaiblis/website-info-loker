@@ -45,7 +45,7 @@ class AuthController extends Controller
             return redirect()->to('/')->with('success', 'Login success!');
         }
         return redirect()->back()->withErrors([
-            'name' => 'login fail!'
+            'name' => 'Gak iso cok!'
         ])->withInput();
     }
 }

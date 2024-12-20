@@ -1,20 +1,31 @@
 @extends('master.layout')
 
-@section('title')
-Contact
-@endsection
+@section('title', 'Contact')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12" style="padding-top: 20px;">
-            <h1>This contact page</h1>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum."</p>
+<div class="container-fluid min-vh-100 d-flex flex-column" style="padding-top: 20px;">
+    <div class="row flex-grow-1">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="text-center">Contact Us</h1>
+            <p class="text-center">Punya pertanyaan atau masukan? Anda dapat menghubungi kami melalui opsi di bawah ini:</p>
+
+            <!-- WhatsApp Button -->
+            <div class="text-center mb-4">
+                <a href="https://wa.me/6281259476914?text=Hallo, Saya ingin menghubungi!" target="_blank" class="btn btn-success btn-lg">
+                    <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                </a>
+            </div>
+
+            <!-- Email Button -->
+            <div class="text-center">
+                <a href="mailto:lukmanardi1221@gmail.com?subject=Inquiry&body=Hello, I would like to get in touch!" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="fas fa-envelope"></i> Contact via Email
+                </a>
+            </div>
         </div>
     </div>
 </div>
+
+@include('components.footer')
+
 @endsection

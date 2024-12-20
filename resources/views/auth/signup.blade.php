@@ -43,6 +43,11 @@
                     @csrf
                     <button class="btn btn-primary">Submit</button>
                 </form>
+
+                <!-- Button to go to the login page -->
+                <div class="mt-3">
+                    <p>Already have an account? <a href="{{ route('signin') }}" class="btn btn-link">Login here</a></p>
+                </div>
             </div>
             <div class="col-md-4"></div>
         </div>
